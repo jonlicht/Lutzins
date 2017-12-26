@@ -1,0 +1,197 @@
+/*----------------------------------------------
+	4.0 Buttons
+---------------------------------------------*/
+
+.button-element {
+	margin-bottom: 30px;
+	display: inline-block;
+	.button {
+		clear: both;
+		float: left;
+	}
+	.button+.button {
+		margin-top: 20px;
+	}
+}
+
+.button {
+ 	border: 1px solid $primary-color;
+ 	font-family: $heading-font;
+ 	color: $body-color;
+ 	@include transition(all .3s ease);
+ 	outline: none;
+ 	&:hover {
+ 		background: $primary-color;
+ 		color: $white;
+ 	}
+}
+
+.button.primary-bg {
+	color: $white;
+	&:hover {
+		background: $white;
+		color: $primary-color;
+	}
+}
+
+.button-radius {
+ 	border-radius: 30px !important;
+}
+
+.button-1x {
+	padding: 2px 19px;
+	font-size: 1.2rem;
+}
+
+.button-2x {
+	padding: 4px 22px;
+	font-size: 1.4rem;
+}
+
+.button-3x {
+	padding: 2px 24px;
+	font-size: 1.8rem;
+}
+
+.button-4x {
+	padding: 2px 29px;
+	font-size: 2.2rem;
+}
+
+.button-5x {
+	padding: 5px 38px;
+	font-size: 2.6rem;
+}
+
+.button-rectangle-left {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 5px;
+		height: 100%;
+ 		@include transition(all .3s ease);
+		background: $primary-color;
+	}
+	&:hover {
+		background: transparent;
+		&:before {
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+.button-rectangle-right {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 5px;
+		height: 100%;
+ 		@include transition(all .3s ease);
+		background: $primary-color;
+	}
+	&:hover {
+		background: transparent;
+		&:before {
+			width: 100%;
+			z-index: -1;
+		}
+	}
+}
+
+.button.button-border {
+	border: 3px solid $primary-color;
+}
+
+.button.button-line {
+	border: 0;
+	border-top: 3px solid $primary-color;
+	border-bottom: 3px solid $primary-color;
+}
+
+.button-shade.button-1x {
+	&:after {
+		width: 56px;
+	}
+}
+
+.button-shade.button-2x {
+	&:after {
+		width: 62px;
+	}
+}
+
+.button-shade.button-3x {
+	&:after {
+		width: 69px;
+	}
+}
+
+.button-shade.button-4x {
+	&:after {
+		width: 78px;
+	}
+}
+
+.button-shade.button-5x {
+	&:after {
+		width: 90px;
+	}
+}
+
+
+.button-shade {
+	position: relative;
+	border: 0;
+	overflow: hidden;
+	color: $white;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -20px;
+		height: 100%;
+		background: #66cff6;
+		transform: skew(20deg, 0);
+ 		@include transition(all .3s ease);
+		z-index: -1;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $primary-color;
+		z-index: -2;
+	}
+	&:hover {
+		background: transparent;
+		&:after {
+			width: 130%;
+			z-index: -1;
+		}
+		&:before {
+			z-index: -2;
+		}
+	}
+}
+
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	.button-arrow.button-5x {
+		padding: 5px 19px;
+	}
+	.button-shade.button-5x {
+		&:after {
+			width: 75px;
+		}
+	}
+}

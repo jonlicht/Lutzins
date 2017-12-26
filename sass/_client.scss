@@ -1,0 +1,55 @@
+/*-----------------------------------------------
+	19.0 Client
+------------------------------------------------*/
+
+.client {
+	height: 60px;
+	width: 100%;
+	position: relative;
+	a {
+		display: block;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.client-logo {
+	position: relative;
+	border: 1px solid $grey;
+	height: 170px;
+	margin: 0 15px;
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 90px;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media (max-width: 991px) {
+	.client {
+		height: 80px;
+	}
+}
+
+@media (max-width: 767px) {
+	.client {
+		float: left;
+		width: 50%;
+	}
+	.client-logo {
+		margin: 0 25px;
+	}
+}
+
+@media (max-width: 459px) {
+	.client {
+		float: none;
+		width: 100%;
+	}
+}

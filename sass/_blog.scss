@@ -1,0 +1,311 @@
+/*-------------------------------------------
+	11.0 Blog
+-------------------------------------------*/
+
+.blog-post {
+	margin-bottom: 30px;
+	&:hover {
+		.post-body {
+			.post-title {
+				a {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.post-thumb {
+		height: 100%;
+		a {
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.post-body {
+		padding-top: 25px;
+		.post-title {
+			font-weight: 700;
+			a {
+				color: $body-color;
+				@include transition(all .3s ease);
+			}
+		}
+		.post-meta {
+			color: $body-color;
+			font-size: 1.2rem;
+			margin-bottom: 15px;
+		}
+		.post-content {
+			color: $body-color;
+		}
+		.read-more {
+			color: $primary-color;
+		}
+	}
+}
+
+.post-list {
+	&:hover {
+		.post-body {
+			.post-title {
+				a {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.post-thumb {
+		a {
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.post-body {
+		color: $body-color;
+		padding: 38px 35px 30px 0;
+		.post-title {
+			font-weight: 500;
+			a {
+				color: $body-color;
+				@include transition(all .3s ease);
+			}
+		}
+		.post-content {
+			margin-top: 14px;
+		}
+		.read-more {
+			color: $primary-color;
+		}
+	}
+}
+
+.blog-post+.blog-post,
+.post-list+.post-list {
+	margin-top: 30px;
+}
+
+.post-details {
+	color: $body-color;
+	.post-thumb {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.post-info {
+		margin-top: 14px;
+		font-size: 1.2rem;
+		p {
+			span {
+				margin-right: 50px;
+				a {
+					color: $body-color;
+					@include transition(all .3s ease);
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	.post-content {
+		p {
+			margin-top: 30px;
+		}
+	}
+}
+
+.post-share {
+	padding: 13px 40px;
+	@include border-radius(3px);
+	ul {
+		font-size: 18px;
+		color: $white;
+		li {
+			display: inline;
+			margin-left: 15px;
+			a {
+				color: $white;
+				@include transition(all .3s ease);
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+.comment-area {
+	.comment-count {
+		margin-bottom: 50px;
+		font-weight: 500;
+	}
+	.comment {
+		.comment-wrap {
+			position: relative;
+			margin-bottom: 40px;
+			.comment-thumb {
+				position: absolute;
+				top: 0;
+				left: 0;
+				img {
+					height: 70px;
+					width: 70px;
+					@include border-radius(50%);
+				}
+			}
+			.comment-body {
+				margin-left: 90px;
+				padding-right: 50px;
+				position: relative;
+				.comment-title {
+					color: $body-color;
+					font-weight: 500;
+					margin-bottom: 10px;
+				}
+				.comment-content {
+					color: $body-color;
+				}
+				.comment-share {
+					position: absolute;
+					right: 0;
+					top: 0;
+					a {
+						i.fa {
+							color: $body-color;
+							@include transition(all .3s ease);
+							&:hover {
+								color: $primary-color;
+							}
+						}
+					}
+				}
+			}
+		}
+		.child-comment {
+			margin-left: 60px;
+		}
+	}
+}
+
+.write-comment {
+	.title {
+		color: $body-color;
+		margin-bottom: 10px;
+	}
+	.subtext {
+		color: $body-color;
+	}
+	.comment-form {
+		margin-top: 23px;
+		max-width: 470px;
+		.form-group {
+			.form-control {
+				height: 40px;
+				@include border-radius(3px);
+				box-shadow: none;
+				outline: none;
+				color: $grey;
+				padding: 10px 20px;
+				border: 1px solid $grey;
+				background: transparent;
+				&:focus {
+					border: 1px solid $primary-color;
+				}
+			}
+			textarea.form-control {
+				height: 100px;
+			}
+		}
+		.btn-default {
+			background: $primary-color;
+			color: $white;
+			height: 40px;
+			border: 0;
+			font-weight: 300;
+			outline: none;
+		}
+	}
+}
+
+
+/*
+Responsive
+-------------------------------------------*/
+
+@media (max-width: 1199px) {
+	.post-list {
+		.post-body {
+			padding: 20px 30px 20px 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.blog-post {
+		float: left;
+		width: calc(50% - 20px);
+		margin: 0 10px 30px;
+	}
+	.post-list {
+		.post-body {
+			padding: 40px 0;
+		}
+	}
+}
+
+@media (max-width: 579px) {
+	.comment-area {
+		.comment {
+			.comment-wrap {
+				margin-bottom: 30px;
+				.comment-thumb {
+					img {
+						width: 50px;
+						height: 50px;
+					}
+				}
+				.comment-body {
+					margin-left: 65px;
+					padding-right: 10px;
+				}
+			}
+			.child-comment {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 519px) {
+	.post-share {
+		padding: 13px 20px;
+	}
+}
+
+@media (max-width: 479px) {
+	.post-share {
+		padding: 8px 15px;
+		ul {
+			li {
+				margin-left: 8px;
+			}
+		}
+	}
+	.blog-post {
+		float: none;
+		width: 100%;
+		margin: 0 0 30px;
+	}
+}
+
+@media (max-width: 399px) {
+	.post-list {
+		.post-body {
+			padding: 30px 0;
+		}
+	}
+}

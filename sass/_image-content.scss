@@ -1,0 +1,150 @@
+/*-----------------------------------------------
+	25.0 Image Content
+------------------------------------------------*/
+
+.download-bg {
+	background: url(../images/template/download-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.image-content {
+	.button {
+		margin-top: 22px;
+		@include border-radius(3px);
+	}
+	.buttons {
+		.button+.button {
+			margin-left: 10px;
+		}
+	}
+	.image-content-list {
+		margin-top: 28px;
+		li {
+			span {
+				margin-right: 8px;
+				margin-bottom: 20px;
+				transition: all .3s ease;
+				color: $primary-color;
+			}
+		}
+		li+li {
+			margin-top: 5px;
+		}
+	}
+}
+
+.image-content {
+	.section-heading {
+		margin-bottom: 0;
+	}
+}
+
+.image-content-1 {
+	margin-top: 70px;
+}
+
+.image-content-3 {
+	margin-top: 40px;
+}
+
+.image-content-bg {
+	background: url(../images/template/image-content-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.image-content-half {
+	float: left;
+	width: 50%;
+	.image-content-wrapper {
+		padding: 0 60px;
+		max-width: 620px;
+		margin-top: 40px;
+		.section-heading {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+.section-half-thumb {
+	img {
+		max-height: 500px;
+		margin: 0 auto;
+	}
+}
+
+.full-grid-thumb {
+	margin-bottom: 30px;
+}
+
+@media (max-width: 1199px) {
+	.image-content-1 {
+		margin-top: 30px;
+	}
+
+	.image-content-3 {
+		margin-top: 0px;
+	}
+	.image-content-half {
+		.image-content-wrapper {
+			margin-top: 10px;
+			padding: 0 15px;
+			.section-heading {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.image-content-1 {
+		margin-top: 0px;
+	}
+	.image-content-half {
+        width: 100%;
+		.image-content-wrapper {
+			padding: 60px;
+            margin: 0;
+            max-width: none;
+			.section-heading {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.section-half-thumb {
+		img {
+			margin: 0 auto 30px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.image-content-half {
+		float: none;
+		width: calc(100% - 30px);
+		margin: 0 15px;
+		padding: 40px 0;
+		.image-content-wrapper {
+			padding: 0;
+			max-width: 100%;
+			.section-heading {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.image-content {
+		.buttons {
+			margin-top: 30px;
+			.button+.button {
+				margin-left: auto;
+				margin-top: 10px;
+			}
+			.button {
+				display: table;
+				margin: 0 auto;
+			}
+		}
+	}
+}

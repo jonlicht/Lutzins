@@ -1,0 +1,46 @@
+/*----------------------------------------------
+ 	2.0 Heading
+ ---------------------------------------------*/
+
+.section-heading {
+	margin-bottom: 55px;
+ 	.title {
+ 		position: relative;
+ 		padding-bottom: 12px;
+ 		margin-bottom: 12px;
+ 		&:before {
+ 			content: "";
+ 			position: absolute;
+ 			bottom: 0;
+ 			left: 0;
+ 			height: 2px;
+ 			width: 100px;
+ 			background: $primary-color;
+ 		}
+ 	}
+}
+
+.section-heading.heading-margin-off {
+	margin-bottom: 0;
+}
+
+.section-heading.text-center {
+	.title {
+		&:before {
+			left: 50%;
+			margin-left: -50px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.section-heading {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-heading {
+		margin-bottom: 30px;
+	}
+}

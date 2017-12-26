@@ -1,0 +1,113 @@
+/*-----------------------------------------------
+	18.0 CounterUp
+------------------------------------------------*/
+
+.counter-bg {
+	background: url(../images/template/counter-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.counter-bg-2 {
+	background: url(../images/template/counter-bg-2.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.counter-bg-3 {
+	background: url(../images/template/counter-bg-3.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.counter-bg-4 {
+	background: url(../images/template/counter-bg-4.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.fact {
+	span.ti {
+		font-size: 40px;
+	}
+	.fact-number {
+		padding-bottom: 3px;
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 50px;
+			height: 2px;
+			background: $primary-color;
+		}
+	}
+	.fact-number+p {
+		margin-top: 10px;
+	}
+}
+
+.primary-bg {
+	.fact {
+		.fact-number {
+			&:before {
+				background: $white;
+			}
+		}
+		.fact-number+p {
+			margin-top: 10px;
+		}
+	}
+}
+
+.fact.fact-default {
+	.fact-number {
+		&:before {
+			left: 0;
+		}
+	}
+}
+
+.fact.fact-center {
+	.fact-number {
+		&:before {
+			left: 50%;
+			margin-left: -25px;
+		}
+	}
+}
+
+.counter-bg-2,
+.counter-bg-3,
+.counter-bg-4 {
+	.fact.fact-center {
+		padding: 70px 15px;
+		background: rgba($white, .7);
+	}
+}
+
+.round-fact {
+	.fact.fact-center {
+		padding-top: 100%;
+		border: 2px solid $primary-color;
+		border-radius: 50%;
+        position: relative;
+        .round-fact-content{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+            right: 15px;
+            text-align: center;
+        }
+	}
+}
+
+@media screen and (max-width: 767px){
+    .fact{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 420px){
+    .fun-fact{
+        .col-xs-6, .col-xs-3{
+            width: 100%;
+        }
+    }
+}

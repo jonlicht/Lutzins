@@ -1,0 +1,221 @@
+/*-----------------------------------------------
+	28.0 Footer 
+------------------------------------------------*/
+.footer-widget-wrapper {
+	.widget-content {
+		.widget-logo {
+			margin-bottom: 20px;
+		}
+		.widget-body {
+			.social-link {
+				ul {
+					li {
+						display: inline;
+						a {
+							height: 30px;
+							width: 30px;
+							border-radius: 15px;
+							@include transition(all .3s ease);
+							background: $grey;
+							text-align: center;
+							&:hover {
+								background: $primary-color;
+								i.fa {
+									color: $white;
+								}
+							}
+							i.fa {
+								color: $primary-color;
+								line-height: 30px;
+								@include transition(all .3s ease);
+							}
+						}
+					}
+					li+li {
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+	.widget {
+		.widget-title {
+			margin-bottom: 7px;
+			background: transparent;
+			padding: 0;
+			h6 {
+				font-weight: 700;
+			}
+		}
+		.widget-body {
+			ul {
+				li {
+					a {
+						color: $black;
+						@include transition(all .3s ease);
+						&:hover {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+			.popular-post {
+				font-size: 1.2rem;
+				line-height: 1.8;
+				p.popular-title {
+					margin-bottom: 0;
+					a {
+						color: $black;
+					}
+				}
+				.post-meta {
+					background: $primary-color;
+					display: inline-block;
+					padding: 0 15px;
+					color: $white;
+					margin-top: 5px;
+				}
+			}
+			.popular-post+.popular-post {
+				margin-top: 10px;
+			}
+			form {
+				.form-control {
+					border: 1px solid $primary-color;
+					@include border-radius(3px);
+					box-shadow: none;
+					color: $body-color;
+					&::-webkit-input-placeholder { 
+					  color: $body-color;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+					  color: $body-color;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+					  color: $body-color;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+					  color: $body-color;
+					}
+				}
+				.button {
+					@include border-radius(3px);
+				}
+			}
+		}
+	}
+	.contact-widget {
+		.widget-body {
+			.widget-contact-item {
+				.contact-icon {
+					width: 20px;
+					float: left;
+				}
+				.contact-info {
+					width: calc(100% - 20px);
+					float: left;
+				}
+			}
+		}
+	}
+	.social-widget {
+		.social-link {
+			ul {
+				li {
+					display: inline;
+					a {
+						height: 30px;
+						width: 30px;
+						border-radius: 15px;
+						@include transition(all .3s ease);
+						background: $grey;
+						text-align: center;
+						&:hover {
+							background: $primary-color;
+							i.fa {
+								color: $white;
+							}
+						}
+						i.fa {
+							color: $primary-color;
+							line-height: 30px;
+							@include transition(all .3s ease);
+						}
+					}
+				}
+				li+li {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+	.payment-widget {
+		.widget-body {
+			.payments {
+				a {
+					color: $body-color;
+					transition: all .3s ease;
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-copyright {
+	padding: 25px 0;
+	background: $primary-color;
+	color: $white;
+	a {
+		color: $white;
+	}
+	ul {
+		li {
+			display: inline;
+			margin-left: 30px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.footer-widget-popular {
+		margin-top: 30px;
+	}
+	.widget-subscribe {
+		margin-top: 30px;
+	}
+	.widget-2n1,
+	.widget-2n2 {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-copyright {
+		text-align: center;
+	}
+	.privacy {
+		text-align: center !important;
+		ul {
+			li {
+				margin: 0 8px;
+			}
+		}
+	}
+}
+
+@media (max-width: 539px) {
+	.footer-widget-wrapper {
+		.col-xs-6 {
+			width: 100%;
+		}
+		.widget-link {
+			margin-top: 30px;
+		}
+		.widget-2n {
+			margin-top: 30px;
+		}
+	}
+}

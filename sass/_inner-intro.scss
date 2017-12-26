@@ -1,0 +1,50 @@
+/*-----------------------------------------------
+	3.0 Inner Intro
+------------------------------------------------*/
+
+.inner-intro-bg {
+	background: url(../images/template/intro-bg.jpg) no-repeat top right;
+	background-size: cover;
+}
+
+.inner-intro {
+	padding: 135px 0;
+	.page-title {
+		font-weight: 700;
+	}
+	.breadcrumb {
+		background: transparent;
+		padding: 0;
+		margin-top: 10px;
+		li {
+			a {
+				color: $body-color;
+				@include transition(all .3s ease);
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+		li.active {
+			color: $body-color;
+		}
+		li+li {
+			&:before {
+				content: "-";
+				color: $body-color;
+			}
+		}
+	}
+}
+
+@media(max-width: 991px) {
+	.inner-intro {
+		padding: 100px 0;
+	}
+}
+
+@media(max-width: 767px) {
+	.inner-intro {
+		padding: 80px 0;
+	}
+}

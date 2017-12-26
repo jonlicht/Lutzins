@@ -1,0 +1,124 @@
+/*-----------------------------------------------
+	13.0 Testimonial
+------------------------------------------------*/
+
+.testimonial-info {
+	text-align: center;
+	i.fa {
+		color: $primary-color;
+		font-size: 28px;
+	}
+	.testimonial-quote {
+		margin-top: 20px;
+	}
+	.testimonial-thumb {
+		margin: 22px 20px;
+		img  {
+			height: 70px;
+			width: 70px;
+			@include border-radius(35px);
+			margin: 0 auto;
+		}
+	}
+	.commenter {
+		text-transform: uppercase;
+	}
+	.designation {
+		text-transform: uppercase;
+		font-size: 1.2rem;
+	}
+}
+
+
+.testimonial-3-grid {
+	border: 1px solid $grey;
+	padding: 60px 20px;
+	margin-bottom: 30px;
+	transition: all .3s ease;
+	&:hover {
+		border: 1px solid $primary-color;
+	}
+}
+
+.testimonial-classic {
+	.ti-comments {
+		font-size: 50px;
+	}
+	.testimonial-quote {
+		font-style: italic;
+		padding: 0 100px;
+	}
+	.testimonial-quote+.commenter {
+		margin-top: 35px;
+	}
+	.commenter {
+		font-style: italic;
+		text-transform: capitalize;
+	}
+}
+
+.testimonial-fullwidth {
+	.testimonial-quote {
+		padding: 0 100px;
+	}
+}
+
+.testimonial-bg-1 {
+	background: url(../images/template/testimonial-bg-1.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.testimonial-bg-2 {
+	background: url(../images/template/testimonial-bg-2.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.testimonial-bg-3 {
+	background: url(../images/template/testimonial-bg-3.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.testimonial-bg-4 {
+	background: url(../images/template/testimonial-bg-4.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.testimonial-shade {
+	background: rgba($body-color, .6);
+	color: $white;
+	i.fa {
+		color: $white;
+	}
+}
+
+@media (max-width: 991px) {
+	.testimonial-3-grid {
+		padding: 30px 15px;
+	}
+}
+
+@media (max-width: 767px) {
+	.testimonial-3-grid {
+		width: calc(50% - 30px);
+		float: left;
+		margin: 0 15px 30px;
+	}
+	.testimonial-classic {
+		.testimonial-quote {
+			padding: 0;
+		}
+	}
+	.testimonial-fullwidth {
+		.testimonial-quote {
+			padding: 0 30px;
+		}
+	}
+}
+
+@media (max-width: 579px) {
+	.testimonial-3-grid {
+		width: 100%;
+		float: none;
+		margin: 0 0 30px;
+	}
+}

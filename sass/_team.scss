@@ -1,0 +1,159 @@
+/*-----------------------------------------------
+	10.0 Team
+------------------------------------------------*/
+
+.team-bg {
+	background: url(../images/team/team-bg.jpg) no-repeat center center;
+	background-size: cover;
+	.team {
+		background: rgba($black, .6);
+		color: $white;
+		.member {
+			.member-info {
+				.name {
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.member {
+	text-align: center;
+	margin-bottom: 30px;
+	&:hover {
+		.member-info {
+			.name {
+				a {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+	.member-info {
+		margin-top: 22px;
+		.name {
+			font-weight: 700;
+			margin-bottom: 7px;
+			a {
+				color: $body-color;
+				@include transition(all .3s ease);
+			}
+		}
+		.designation {
+			font-weight: 700;
+		}
+		.social-link {
+			margin-top: 13px;
+			li {
+				display: inline;
+				margin: 0 3px;
+				a {
+					width: 30px;
+					height: 30px;
+					@include border-radius(15px);
+					background: $grey;
+					line-height: 30px;
+					@include transition(all .3s ease);
+					&:hover {
+						background: $primary-color;
+						i.fa {
+							color: $white;
+						}
+					}
+					i.fa {
+						color: $body-color;
+						@include transition(all .3s ease);
+					}
+				}
+			}
+		}
+	}
+}
+
+.member.member-overlay {
+	&:hover {
+		.member-thumb {
+			.overlay {
+				opacity: 1;
+				background: rgba($primary-color, .8);
+			}
+		}
+	}
+	.member-thumb {
+		position: relative;
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba($primary-color, 0);
+			color: $white;
+			opacity: 0;
+			@include transition(all .3s ease);
+			.overlay-content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				padding: 10px;
+				.name {
+					font-weight: 700;
+					margin-bottom: 7px;
+					a {
+						color: $white;
+						@include transition(all .3s ease);
+					}
+				}
+				.designation {
+					font-weight: 700;
+				}
+				.social-link {
+					margin-top: 13px;
+					li {
+						display: inline;
+						margin: 0 3px;
+						a {
+							width: 30px;
+							height: 30px;
+							@include border-radius(15px);
+							background: $grey;
+							line-height: 30px;
+							@include transition(all .3s ease);
+							&:hover {
+								background: $primary-color;
+								i.fa {
+									color: $white;
+								}
+							}
+							i.fa {
+								color: $body-color;
+								@include transition(all .3s ease);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.member {
+		float: left;
+		width: calc(50% - 20px);
+		margin: 0 10px 30px;
+	}
+}
+
+@media (max-width: 499px) {
+	.member {
+		float: none;
+		width: 100%;
+		margin: 0 0 30px;
+	}
+}

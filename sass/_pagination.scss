@@ -1,0 +1,59 @@
+/*------------------------------------------
+	21.0 Pagination
+-------------------------------------------*/
+
+.pagination-list {
+	.pagination {
+		margin: 0;
+		li {
+			padding: 0 5px;
+			a {
+				height: 40px;
+				width: 40px;
+				@include border-radius(50%);
+				background: transparent;
+				line-height: 40px;
+				padding: 0;
+				color: $black;
+				border: 1px solid $grey;
+				float: none;
+				@include transition(all .3s ease);
+				&:hover {
+					background: transparent;
+					border: 1px solid $primary-color;
+					color: $primary-color;
+				}
+			}
+		}
+		li.active {
+			a {
+				border: 1px solid $primary-color;
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.pagination-list {
+		.pagination {
+			margin: 0;
+			li {
+				a {
+					height: 35px;
+					width: 35px;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.pagination-list {
+		.pagination {
+			li {
+				padding: 0 2px;
+			}
+		}
+	}
+}

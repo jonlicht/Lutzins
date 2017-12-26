@@ -1,0 +1,488 @@
+/*-----------------------------------------------
+	23.0 Slider
+------------------------------------------------*/
+
+.owl-full-grid,
+.owl-half-grid,
+.owl-full-width,
+.banner-carousel,
+.owl-client,
+.product-calousel {
+	position: relative;
+	&:hover {
+		.owl-buttons {
+			.owl-next,
+			.owl-prev {
+				opacity: 1;
+			}
+		}
+	}
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			color: $white;
+			text-align: center;
+			background: rgba($primary-color, .55);
+			@include transition(all .3s ease);
+			opacity: 0;
+			&:hover {
+				background: rgba($primary-color, 1);
+			}
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+}
+
+.product-item {
+	.product-body {
+		.title {
+			a {
+				color: $body-color;
+			}
+		}
+	}
+}
+
+.owl-full-grid {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			height: 80px;
+			width: 40px;
+			margin-top: -40px;
+			line-height: 80px;
+		}
+	}
+}
+
+.banner-carousel,
+.owl-full-width {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			height: 80px;
+			width: 40px;
+			margin-top: -40px;
+			line-height: 80px;
+		}
+	}
+}
+
+.owl-half-grid {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			height: 60px;
+			width: 30px;
+			margin-top: -30px;
+			line-height: 60px;
+		}
+	}
+}
+
+.owl-half-classic {
+	.owl-controls {
+		.owl-pagination {
+			margin-top: 20px;
+			text-align: center;
+			.owl-page {
+				height: 12px;
+				width: 12px;
+				border-radius:8px;
+				border: 0;
+				background: $grey;
+				display: inline-block;
+				margin: 0 5px;
+			}
+			.owl-page.active {
+				background: $primary-color;
+			}
+		}
+	}
+}
+
+.banner-carousel {
+	.slider-bg-1 {
+		background: url(../images/slider/slider-5.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-2 {
+		background: url(../images/slider/slider-6.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-3 {
+		background: url(../images/slider/slider-7.jpg) no-repeat center center;
+		background-size: cover;
+	}
+}
+
+.banner-carousel.banner-carousel-2 {
+	.slider-bg-4 {
+		background: url(../images/slider/slider-8.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-5 {
+		background: url(../images/slider/slider-9.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-6 {
+		background: url(../images/slider/slider-10.jpg) no-repeat center center;
+		background-size: cover;
+	}
+}
+
+.banner-carousel.banner-carousel-3 {
+	.slider-bg-4 {
+		background: url(../images/slider/slider-11.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-5 {
+		background: url(../images/slider/slider-12.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-6 {
+		background: url(../images/slider/slider-13.jpg) no-repeat center center;
+		background-size: cover;
+	}
+}
+
+.banner-simple {
+	.slider-bg-1 {
+		background: url(../images/slider/banner-simple-bg.jpg) no-repeat top right;
+		background-size: cover;
+	}
+	.slider-bg-2 {
+		background: url(../images/slider/banner-simple-bg-2.jpg) no-repeat top center;
+		background-size: cover;
+	}
+	.slider-bg-3 {
+		background: url(../images/slider/slider-14.jpg) no-repeat center center;
+		background-size: cover;
+	}
+}
+
+.owl-full-width {
+	.slider-bg-1 {
+		background: url(../images/slider/slider-4.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-2 {
+		background: url(../images/slider/slider-3.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	.slider-bg-3 {
+		background: url(../images/slider/slider-1.jpg) no-repeat center center;
+		background-size: cover;
+	}
+}
+
+.banner-carousel,
+.banner-simple {
+	.banner-wrapper {
+		height: 690px;
+		position: relative;
+		.banner-content {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: translateY(-50%);
+			max-width: 650px;
+			.title {
+				font-weight: 700;
+			}
+			.title+.subtext {
+				margin-top: 20px;
+			}
+			.subtext+.carousel-button {
+				margin-top: 30px;
+			}
+			.carousel-button {
+				.button {
+					border-radius: 3px;
+				}
+				.button.primary-bg {
+					&:hover {
+						background: transparent;
+					}
+				}
+				.button+.button {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+.banner-simple {
+	.banner-wrapper {
+		.banner-content {
+			h6 {
+				margin-top: 10px;
+				margin-bottom: 30px;
+			}
+		}
+		.section-half-thumb {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.owl-full-width {
+	.banner-wrapper {
+		height: 600px;
+		position: relative;
+		.banner-content {
+			position: absolute;
+			top: 20%;
+			left: 0;
+			right: 0;
+			.section-heading {
+				margin-bottom: 0;
+				.title {
+					font-size: 3.6rem;
+				}
+				.subtext {
+					font-size: 1.4rem;
+					max-width: 550px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+.owl-client,
+.product-calousel {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			height: 30px;
+			width: 30px;
+			margin-top: -15px;
+			line-height: 30px;
+			border-radius: 25px;
+			background: $primary-color;
+			i.fa {
+				font-size: 22px;
+				line-height: 30px;
+			}
+		}
+		.owl-prev {
+			left: -45px;
+		}
+		.owl-next {
+			right: -45px;
+		}
+	}
+}
+
+.testimonial-standard,
+.testimonial-classic {
+	.owl-buttons {
+		.owl-prev,
+		.owl-next {
+			margin-top: -11px;
+			position: absolute;
+			top: 50%;
+			i.fa {
+				font-size: 22px;
+				line-height: 22px;
+			}
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.banner-carousel {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 60px;
+				width: 30px;
+				margin-top: -30px;
+				line-height: 60px;
+			}
+		}
+	}
+	.owl-client,
+	.product-calousel {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 20px;
+				width: 20px;
+				margin-top: -10px;
+				line-height: 20px;
+				i.fa {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+			.owl-prev {
+				left: -10px;
+			}
+			.owl-next {
+				right: -10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.banner-carousel {
+		.banner-wrapper {
+			height: 550px;
+			.banner-content {
+				padding: 0 20px;
+			}
+		}
+	}
+	.owl-full-grid {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 60px;
+				width: 30px;
+				margin-top: -30px;
+				line-height: 60px;
+			}
+		}
+	}
+	.owl-full-width {
+		.banner-wrapper {
+			height: 450px;
+			.banner-content {
+				top: 25%;
+				padding: 0 30px;
+			}
+		}
+	}
+	.owl-full-width {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 60px;
+				width: 30px;
+				margin-top: -30px;
+				line-height: 60px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+	.owl-client,
+	.product-calousel {
+		.owl-buttons {
+			.owl-prev {
+				left: 0px;
+			}
+			.owl-next {
+				right: 0px;
+			}
+		}
+	}
+}
+
+@media (max-width: 579px) {
+	.banner-carousel {
+		.banner-wrapper {
+			.banner-content {
+				.title {
+					br {
+						display: none;
+						visibility: hidden;
+					}
+				}
+			}
+		}
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 50px;
+				width: 25px;
+				margin-top: -25px;
+				line-height: 50px;
+			}
+		}
+	}
+	.owl-full-width {
+		.banner-wrapper {
+			height: 350px;
+		}
+	}
+	.owl-full-width {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 50px;
+				width: 25px;
+				margin-top: -25px;
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+@media (max-width: 499px) {
+	.banner-carousel,
+	.banner-simple {
+		.banner-wrapper {
+			height: 550px;
+			.banner-content {
+				padding: 0 20px;
+				.title {
+					font-size: 3.8rem;
+				}
+				.carousel-button {
+					.button {
+						margin-right: 0px;
+						margin-left: 0;
+					}
+					.button+.button {
+						margin-left: 0;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+	.owl-full-grid,
+	.owl-half-grid {
+		.owl-buttons {
+			.owl-prev,
+			.owl-next {
+				height: 50px;
+				width: 25px;
+				margin-top: -25px;
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+@media (max-width: 359px) {
+	.banner-carousel,
+	.banner-simple {
+		.banner-wrapper {			
+			height: 600px;
+		}
+	}
+}

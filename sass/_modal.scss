@@ -1,0 +1,20 @@
+/*-----------------------------------------
+	22.0 Modal
+-----------------------------------------*/
+
+.modal-header {
+	border-bottom: 0;
+	.close {
+		color: $primary-color;
+		opacity: 1;
+	}
+}
+
+.modal-content {
+	border-radius: 3px;
+	.modal-body {
+		.section-heading {
+			margin-bottom: 30px;
+		}
+	}
+}
