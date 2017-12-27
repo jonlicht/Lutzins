@@ -33,7 +33,7 @@ $(document).ready(function () {
     navbarCollapse();
 
     /*-------------------------------------
-      progressBar  
+      progressBar
       -------------------------------------*/
     function animateProgressBar(pb) {
         if ($.fn.visible && $(pb).visible() && !$(pb).hasClass('animated')) {
@@ -133,7 +133,7 @@ $(document).ready(function () {
             });
             $(npv).addClass('animated');
             console.log("animated");
-        } 
+        }
     }
 
     function initNumberProgress() {
@@ -144,7 +144,7 @@ $(document).ready(function () {
     }
 
     initNumberProgress();
-    
+
 
 
     /*-------------------------------------
@@ -328,7 +328,7 @@ $(document).ready(function () {
             pagination: false
         });
     }
-    
+
     /*-----------------------------------
     Contact Form
     -----------------------------------*/
@@ -340,6 +340,7 @@ $(document).ready(function () {
 
     }
     $("#contactForm").on('submit', function (e) {
+
         e.preventDefault();
         var data = {
             name: $("#name").val(),
@@ -347,13 +348,13 @@ $(document).ready(function () {
             phone: $("#phone").val(),
             message: $("#message").val()
         };
-
         if (isValidEmail(data['email']) && (data['message'].length > 1) && (data['name'].length > 1) && (data['phone'].length > 1)) {
             $.ajax({
                 type: "POST",
                 url: "sendmail.php",
                 data: data,
-                success: function () {
+                success: function (e) {
+                    console.log(e);
                     $('#contactForm .input-success').delay(500).fadeIn(1000);
                     $('#contactForm .input-error').fadeOut(500);
                 }
@@ -372,7 +373,7 @@ $(document).ready(function () {
     -----------------------------------*/
     $(".flexo-subscription").ajaxChimp({
         callback: mailchimpResponse,
-        url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".  
+        url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".
     });
 
     function mailchimpResponse(resp) {

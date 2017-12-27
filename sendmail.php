@@ -3,7 +3,7 @@
 $name = trim($_POST['name']);
 $email = trim($_POST['email']);
 $phone = trim($_POST['phone']);
-$subject = "A message from SaaSera";
+$subject = "Lutzins.com contact form submission";
 $message = trim($_POST['message']);
 
 // Email address validation - works with php 5.2+
@@ -30,13 +30,18 @@ if( isset($name) && isset($email) && isset($phone) && isset($message) && is_emai
 	<strong>Message:</strong> $message <br>
 EOD;
 //Must end on first column
-	
+
 	$headers = "From: $name <$email>\r\n";
 	$headers .= 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 	// PHP email sender
-	mail($to, $sub, $body, $headers);
+
+	if(mail($to, $sub, $body, $headers)){
+			echo "The email was successfully sent.";
+	} else {
+			echo "The email was NOT sent.";
+	}
 }
 
 
